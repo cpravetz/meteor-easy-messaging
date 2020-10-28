@@ -1,4 +1,5 @@
 <template name="ConversationMessages">
+  <div class="clickable">
   {{#if Template.subscriptionsReady}}
     {{#each message in messages}}
       {{> ConversationMessage message=message}}
@@ -18,4 +19,5 @@
     </div>
     
   {{/if}}
+  </div>
 </template>

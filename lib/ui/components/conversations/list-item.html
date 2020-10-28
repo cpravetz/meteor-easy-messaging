@@ -1,7 +1,7 @@
 <template name="ConversationListItem">
-  <a href="{{pathFor '/conversation/:id' id=conversation._id}}">
+  <a href="/conversation/{{conversation._id}}">
     <div class="active_chats_card">
-      <img class="contact_thumbnail" src="/images/placeholder.png">
+        <i class="material-icons">chat</i>
   		<div class="active_chat_details">
         <!-- {{participant.availibilityStatus}} -->
   			<span class="contact_title">{{participant.user.username}} </span>
@@ -11,7 +11,7 @@
           <span class="last_message">Unread Conversation</span>
         {{/if}}
         {{#if participant.isTyping}}
-          <span class="last_message">typingg.....</span>
+          <span class="last_message">typing.....</span>
         {{/if}}
   		</div>
     </div>

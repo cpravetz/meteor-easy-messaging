@@ -1,5 +1,6 @@
 <template name="ConversationListPage">
-  <div class="container">
+  <div class="container clickable">
+    {{> ConversationNew}}
     <div id="message-filter">
       <select id="js-list-select">
         <option value="all" selected="">All Messages</option>

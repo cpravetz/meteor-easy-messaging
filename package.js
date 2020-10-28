@@ -1,24 +1,20 @@
 Package.describe({
-  name: 'ibrahimzahoor:easy-messaging',
+  name: 'seakaytee:easy-messaging',
   version: '0.3.2',
   summary: 'Built on socialize:messaging, provide full messaging kit',
-  git: 'https://github.com/ibrahimzahoor/easy-messaging.git',
+  git: 'https://github.com/cpravetz/easy-messaging.git',
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.3.3');
   api.use(['ecmascript', 'check', 'underscore', 'templating', 'reactive-dict']);
-  // api.imply([
-  //   'socialize:messaging@0.5.1',
-  //   'socialize:user-model@0.1.7'
-  // ]);
   api.use([
-    'socialize:messaging@0.5.1',
-    'socialize:user-model@0.1.7',
-    'mizzao:user-status@0.6.6',
-    'reywood:publish-composite@1.4.2',
-    'tmeasday:publish-counts@0.7.3',
+    'socialize:messaging',
+    'socialize:user-model',
+    'socialize:user-presence',
+    'reywood:publish-composite',
+    'tmeasday:publish-counts',
   ]);
 
   api.mainModule('server.js', 'server');
@@ -35,6 +31,6 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('ibrahimzahoor:easy-messaging');
+  api.use('seakaytee:easy-messaging');
   api.mainModule('tests/easy-messaging-tests.js');
 });

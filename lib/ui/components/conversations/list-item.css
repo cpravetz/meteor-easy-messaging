@@ -14,7 +14,7 @@ div#active_chats {
 }
 .active_chat_details .last_message {
 	font-size: 0.75em;
-	color: darkgray;
+	color: white;
 }
 
 .contact_thumbnail {
